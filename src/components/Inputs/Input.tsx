@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, MutableRefObject } from "react";
+import { ChangeEvent, FC } from "react";
 
 interface inputProps {
     type: 'text' | 'number'
@@ -11,7 +11,6 @@ interface inputProps {
     name: string
     placeholder?: string,
     error?: string,
-    ref?: MutableRefObject<HTMLInputElement>
 }
 
 const Input:FC<inputProps> = ({
@@ -24,7 +23,6 @@ const Input:FC<inputProps> = ({
     name,
     placeholder,
     error,
-    // ref
 }) => {
     let labelContent = null;
     if (label) {

@@ -3,7 +3,7 @@ interface buttonProps {
     type: 'button' | 'submit'
     name: string,
     flexEnd: boolean
-    functionToCall: (arg: unknown) => void;
+    functionToCall?: (arg: unknown) => void;
     disabled?: boolean
 }
 const ClassicButton: FC<buttonProps> = ({
