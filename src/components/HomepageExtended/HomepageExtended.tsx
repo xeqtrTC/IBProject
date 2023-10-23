@@ -1,6 +1,7 @@
-import { FC, ChangeEvent, useState, Fragment } from 'react'
+import { FC, ChangeEvent, useState, Fragment, Dispatch, SetStateAction } from 'react'
 import HandleForm from './HandleForm'
 import HandleStops from './HandleStops'
+import { calculatedResponsesProps } from '../../pages/Homepage/Homepage'
 
 export interface errorsProps {
     originError: string,
@@ -13,7 +14,13 @@ export interface stateInfoProps {
     
 }
 
-const HandlepageExtended: FC = () => {
+const HandlepageExtended: FC<{
+    setCalculatedResponses: Dispatch<SetStateAction<calculatedResponsesProps>>,
+    calculatedResponses: calculatedResponsesProps
+}> = ({
+    setCalculatedResponses,
+    calculatedResponses
+}) => {
     const [stateInfo, setStateInfo] = useState<stateInfoProps>({
         origin: '',
         destination: '',
@@ -37,11 +44,14 @@ const HandlepageExtended: FC = () => {
             <HandleForm 
             stateInfo={stateInfo}
             handleInputChange={handleInputChange}
+            setCalculatedResponses={setCalculatedResponses}
             />
             <HandleStops 
             stateInfo={stateInfo}
             setStateInfo={setStateInfo}
             handleInputChange={handleInputChange}
+            setCalculatedResponses={setCalculatedResponses}
+            calculatedResponses={calculatedResponses}
             />
         </Fragment>
          
