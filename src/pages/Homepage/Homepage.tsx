@@ -2,21 +2,9 @@ import { FC, useState } from 'react'
 import Map from '../../components/Map/Map'
 import HandlepageExtended from '../../components/HomepageExtended/HomepageExtended'
 import ClassicButton from '../../components/Buttons/ClassicButton'
+import { calculatedResponsesProps } from '../../interfaces/interfaces'
 
-export interface calculatedResponsesProps {
-    origin: {
-        lat: number,
-        lng: number
-    },
-    destination: {
-        lat: number,
-        lng: number
-    }
-    stops: {
-        lat: number,
-        lng: number
-    }[]
-}
+
 const Homepage: FC = () => {
     const [calculatedResponses, setCalculatedResponses] = useState<calculatedResponsesProps>({
         origin: {

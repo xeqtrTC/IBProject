@@ -1,10 +1,7 @@
 import { AxiosResponse } from "axios"
 import { getGeoCodes } from "../queries/geocode/getGeoCodes"
+import { validStopsProps } from "../interfaces/interfaces";
 
-interface validStopsProps {
-    destinationLat: number,
-    destinationLng: number
-}
 
 const useGeoGode = () => {
 

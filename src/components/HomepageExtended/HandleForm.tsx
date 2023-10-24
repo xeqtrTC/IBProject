@@ -1,9 +1,8 @@
 import { FC, useState, ChangeEvent, Dispatch, SetStateAction } from 'react'
 import Input from '../Inputs/Input';
-import { errorsProps, stateInfoProps } from './HomepageExtended';
 import ClassicButton from '../Buttons/ClassicButton';
 import useGeoGode from '../../hooks/useGeoCode';
-import { calculatedResponsesProps } from '../../pages/Homepage/Homepage';
+import { calculatedResponsesProps, errorsProps, stateInfoProps } from '../../interfaces/interfaces';
 
 const HandleForm: FC<{
     stateInfo: stateInfoProps,

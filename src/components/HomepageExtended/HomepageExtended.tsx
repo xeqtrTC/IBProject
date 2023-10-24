@@ -1,18 +1,7 @@
 import { FC, ChangeEvent, useState, Fragment, Dispatch, SetStateAction } from 'react'
 import HandleForm from './HandleForm'
 import HandleStops from './HandleStops'
-import { calculatedResponsesProps } from '../../pages/Homepage/Homepage'
-
-export interface errorsProps {
-    originError: string,
-    destinationError: string
-}
-export interface stateInfoProps {
-    origin: string,
-    destination: string,
-    stops: string[]
-    
-}
+import { calculatedResponsesProps, stateInfoProps } from '../../interfaces/interfaces'
 
 const HandlepageExtended: FC<{
     setCalculatedResponses: Dispatch<SetStateAction<calculatedResponsesProps>>,

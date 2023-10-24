@@ -1,24 +1,12 @@
-import { FC, ChangeEvent, Dispatch, SetStateAction, useEffect, useMemo } from 'react'
+import { FC, useEffect, useMemo } from 'react'
 import ClassicButton from '../Buttons/ClassicButton'
 import { GrClear, } from 'react-icons/gr'
 import { AiOutlineClose } from 'react-icons/ai'
-import { stateInfoProps } from './HomepageExtended'
 import Input from '../Inputs/Input'
-import { calculatedResponsesProps } from '../../pages/Homepage/Homepage'
 import useGeoGode from '../../hooks/useGeoCode'
+import { handleStopsProps, uniqueCoordinatesProps } from '../../interfaces/interfaces'
 
-interface uniqueCoordinatesProps {
-    lat: number,
-    lng: number
-}
 
-interface handleStopsProps {
-    setStateInfo: Dispatch<SetStateAction<stateInfoProps>>,
-    stateInfo: stateInfoProps,
-    handleInputChange: (e: ChangeEvent<HTMLInputElement>, index?: number) => void,
-    setCalculatedResponses: Dispatch<SetStateAction<calculatedResponsesProps>>,
-    calculatedResponses: calculatedResponsesProps
-}
 const HandleStops: FC<handleStopsProps> = ({
     stateInfo,
     handleInputChange,
