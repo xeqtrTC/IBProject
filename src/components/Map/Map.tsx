@@ -1,7 +1,7 @@
 import { FC,useEffect, useState, Fragment } from 'react'
 import { useLoadScript, GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api'
 import LoadingSpinner from '../Loaders/LoadingSpinner'
-import { calculatedResponsesProps } from '../../pages/Homepage/Homepage'
+import { calculatedResponsesProps } from '../../interfaces/interfaces'
 
 const Map: FC<{
     calculatedResponses: calculatedResponsesProps,

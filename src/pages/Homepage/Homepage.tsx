@@ -68,16 +68,11 @@ const Homepage: FC = () => {
                             calculatedResponses={calculatedResponses}
                             setCalculatedResponses={setCalculatedResponses}
                             />
-                             <ClassicButton
-                type='button'
-                name='Show routes'
-                flexEnd={true}
-                functionToCall={calculateRoute}
-                /> 
+                            {buttonContent} 
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
             <div className='flex grow p-2'>
                 <Map 
                 calculatedResponses={calculatedResponses}
